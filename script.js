@@ -1,14 +1,14 @@
 var particles = []
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(1440, 810);
   angleMode(DEGREES)
 }
 
 function draw() {
   background(30);
   
-  for(var i = 0; i <50; i++) {
+  for(var i = 0; i <10; i++) {
     p = new Particle()
     particles.push(p)
   }

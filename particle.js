@@ -14,7 +14,7 @@ class Particle{
 
     update() {
 
-        var m = map(sin(frameCount *6), -1, 1, 0.4, 0.6)
+        var m = map(sin(frameCount *3), 1, 0.1, 0.4, 0.6)
         this.acc.mult(m)
 
 
@@ -27,13 +27,13 @@ class Particle{
         this.pos.y), 0, width/2, 0, 255)
         
         if (dist(width/2, height/2, this.pos.x, this.pos.y) >80) {
-            this.alpha -=5
+            this.alpha -=2
         }
     }
 
     show() {
         noStroke()
         fill(this.r, this.g, this.b, this.alpha)
-        ellipse(this.pos.x, this.pos.y, 2)
+        ellipse(this.pos.x, this.pos.y, 4)
     }
 } 
